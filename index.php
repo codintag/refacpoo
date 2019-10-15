@@ -6,18 +6,9 @@
  * On va donc se connecter à la base de données, récupérer les articles du plus récent au plus ancien (SELECT * FROM articles ORDER BY created_at DESC)
  * puis on va boucler dessus pour afficher chacun d'entre eux
  */
-require_once('libraries/database.php');
-require_once('libraries/utils.php');
-
-/**
- * 2. Récupération des articles
- */
-$articles = findAllArticles();
-
-/**
- * 3. Affichage
- */
-$pageTitle = "Accueil";
+require_once('libraries/controllers/Article.php');
 
 
-render('articles/index', compact('pageTitle', 'articles'));
+
+$controller = new \controllers\Article();
+$controller->index();
