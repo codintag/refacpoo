@@ -1,10 +1,4 @@
 <?php
-
-$commentaires = $model->findAll();
-$commentaire = $model->find(1);
-$model->delete(1);
-
-
 class Database {
 
     private static $instance = null;
