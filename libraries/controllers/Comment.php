@@ -53,7 +53,7 @@ class Comment extends Controller{
 
         // 4. Redirection vers l'article en question :
 
-        \Http::redirect("article.php?id=" . $article_id);
+        \Http::redirect("index.php?controller=article&task=show&id=" . $article_id);
 
     }
 
@@ -91,6 +91,6 @@ class Comment extends Controller{
         // header("Location: article.php?id=" . $article_id);
         // exit();
 
-        \Http::redirect("article.php?id=" . $article_id);
+        \Http::redirect("index.php?controller=article&task=show&id=" . $article_id);
     }
 }
